@@ -2,9 +2,7 @@ package com.driver;
 
 public class Pizza {
 
-//    private int price;
     public int totalPrice;
-//    public Boolean isVeg;
     public String bill;
     public int basePrice;
     public int cheesePrice;
@@ -33,6 +31,7 @@ public class Pizza {
         isCheeseAdded = false;
         isToppingsAdded = false;
         isPaperBagAdded = false;
+        isBillGenerated = false;
 
         totalPrice = basePrice;
         bill = "Base Price Of The Pizza: "+ basePrice+"\n";
@@ -44,7 +43,7 @@ public class Pizza {
 
     public void addExtraCheese(){
         // your code goes here
-        if(!isCheeseAdded){
+        if(isCheeseAdded==false){
             totalPrice += cheesePrice;
             isCheeseAdded = true;
         }
@@ -53,7 +52,7 @@ public class Pizza {
 
     public void addExtraToppings(){
         // your code goes here
-        if(!isToppingsAdded) {
+        if(isToppingsAdded==false) {
             totalPrice += toppingsPrice;
             isToppingsAdded = true;
         }
@@ -63,7 +62,7 @@ public class Pizza {
 
     public void addTakeaway(){
         // your code goes here
-        if(!isPaperBagAdded){
+        if(isPaperBagAdded==false){
             totalPrice += paperBagPrice;
             isPaperBagAdded = true;
         }
@@ -72,7 +71,7 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
-        if(!isBillGenerated){
+        if(isBillGenerated==false){
             if(isCheeseAdded){
                 bill = bill +"Extra Cheese Added: "+ cheesePrice+"\n";
             }
