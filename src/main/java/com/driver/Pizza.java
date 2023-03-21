@@ -15,7 +15,6 @@ public class Pizza {
 
 
     public Pizza(Boolean isVeg){
-//        this.isVeg = isVeg;
         // your code goes here
         if(isVeg){
             basePrice = 300;
@@ -31,7 +30,6 @@ public class Pizza {
         isCheeseAdded = false;
         isToppingsAdded = false;
         isPaperBagAdded = false;
-        isBillGenerated = false;
 
         totalPrice = basePrice;
         bill = "Base Price Of The Pizza: "+ basePrice+"\n";
@@ -44,7 +42,7 @@ public class Pizza {
     public void addExtraCheese(){
         // your code goes here
         if(isCheeseAdded==false){
-            totalPrice += cheesePrice;
+            totalPrice = totalPrice + cheesePrice;
             isCheeseAdded = true;
         }
     }
@@ -53,7 +51,7 @@ public class Pizza {
     public void addExtraToppings(){
         // your code goes here
         if(isToppingsAdded==false) {
-            totalPrice += toppingsPrice;
+            totalPrice = totalPrice + toppingsPrice;
             isToppingsAdded = true;
         }
 
@@ -63,7 +61,7 @@ public class Pizza {
     public void addTakeaway(){
         // your code goes here
         if(isPaperBagAdded==false){
-            totalPrice += paperBagPrice;
+            totalPrice = totalPrice + paperBagPrice;
             isPaperBagAdded = true;
         }
 
@@ -73,13 +71,13 @@ public class Pizza {
         // your code goes here
         if(isBillGenerated==false){
             if(isCheeseAdded){
-                bill = bill +"Extra Cheese Added: "+ cheesePrice+"\n";
+                bill = bill +"Extra Cheese Added: "+ cheesePrice+ "\n";
             }
             if(isToppingsAdded){
-                bill = bill + "Extra Toppings Added: "+ toppingsPrice+"\n";
+                bill = bill + "Extra Toppings Added: "+ toppingsPrice+ "\n";
             }
             if(isPaperBagAdded){
-                bill = bill+"Paperbag Added: "+ paperBagPrice+"\n";
+                bill = bill+"Paperbag Added: "+ paperBagPrice+ "\n";
             }
 
             bill = bill+"Total Price: "+totalPrice;
