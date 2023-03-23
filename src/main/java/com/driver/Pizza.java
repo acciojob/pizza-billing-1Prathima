@@ -80,7 +80,7 @@ public class Pizza {
                 bill = bill+"Paperbag Added: "+ paperBagPrice+ "\n";
             }
 
-            bill = bill+"Total Price: "+totalPrice;
+            bill = bill+"Total Price: "+totalPrice + "\n";
             isBillGenerated=true;
         }
         return bill;
